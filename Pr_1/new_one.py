@@ -220,21 +220,6 @@ print()
 print('5.2/ Месяцы, в которых средняя цена меньше, чем в предыдущем и следующем месяце:')
 print(result_5_2)
 
-'''
-# сгруппируем таблицу take_table_sale по item_id и подсчитаем суммарное количество продаж товара с каждым item_id
-sales_by_item = take_table_sale.groupby('item_id')['item_cnt_day'].sum()
+(min_sales)
 
-# добавим столбец category_id из таблицы items с помощью метода map()
-sales_by_item_categories = sales_by_item.map(
-    take_table_items.set_index('item_id')['category_id'])
-sales_by_item_categories = sales_by_item_categories.sort_values().head(5)
-# print(sales_by_item_categories)
-# сгруппируем sales_by_item_categories по category_id и подсчитаем суммарное количество продаж товаров в каждой категории.
-# sales_by_category = sales_by_item_categories.groupby(sales_by_item_categories).sum()
-# min_category_id = sales_by_category.idxmin()
-# min_category_name = take_table_categories.loc[take_table_categories['item_category_id'] == min_category_id]['item_category_name'].iloc[0]
-# min_sales = sales_by_category.groupby('item_id')['item_cnt_day']
-# min_categories = sales_by_category[sales_by_category == min_sales].index
-# print(min_sales)
-'''
 
